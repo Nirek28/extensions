@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Subscription Hub</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <span class="mark">S</span>
+  <div>
+    <h1>Subscription Hub</h1>
+    <p>Automatic usage tracker</p>
+  </div>
+</header>
+
+<div id="notice" role="status"></div>
+
+<section id="pair">
+  <label for="name">Browser name</label>
+  <input id="name" maxlength="60" value="My Chrome browser">
+  <label for="code">Connection code from website Settings</label>
+  <input id="code" autocomplete="off" spellcheck="false" placeholder="Paste your code here">
+  <button id="connect">Connect account</button>
+  <p class="hint">Get a code from Settings → Browser extension on the website. Codes expire after five minutes.</p>
+</section>
+
+<section id="connected" hidden>
+  <div class="card">
+    <div id="status" class="summary"></div>
+    <div class="live"><i id="dot"></i><span id="sync-line">Waiting for first upload…</span></div>
+  </div>
+
+  <button id="toggle">Start tracking</button>
+
+  <h2>Websites</h2>
+  <p class="hint">Allow each website once. Time counts while its tab is in front or playing sound, even in the background.</p>
+  <div id="sites"></div>
+
+  <p id="stats"></p>
+  <p id="expiry"></p>
+
+  <details>
+    <summary>Rejected records</summary>
+    <p id="rejected"></p>
+  </details>
+
+  <button id="disconnect" class="danger">Disconnect and clear pending data</button>
+</section>
+
+<footer>
+  <a href="http://localhost:4000/settings" target="_blank" rel="noreferrer">Open website Settings ↗</a>
+  <p>Only selected subscriptions are measured. Browser time is an estimate. Phone and TV use is not included.</p>
+  <a href="privacy.html" target="_blank" rel="noreferrer">Privacy and data controls</a>
+</footer>
+
+<script type="module" src="popup.js"></script>
+</body>
+</html>

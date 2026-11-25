@@ -1,0 +1,39 @@
+*{box-sizing:border-box}
+:root{--bg:#07080b;--panel:#12141a;--panel-2:#1a1d25;--line:#262a34;--text:#eef1f6;--muted:#8b93a3;--blue:#3b82f6;--blue-soft:#93c5fd;--blue-dark:#1e3a8a;--warn:#e0b25c;--danger:#f87171}
+body{width:370px;margin:0;padding:20px;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#1e3a8a);color:#fff;font-size:22px;font-weight:800}
+h1{font-size:18px;margin:0;letter-spacing:-.3px}
+header p{margin:0;color:var(--muted);font-size:12px}
+h2{font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin:20px 0 6px}
+label{display:block;margin-top:12px;font-size:12px;color:var(--muted)}
+input{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--text);outline:none}
+input:focus{border-color:var(--blue)}
+button{width:100%;margin-top:10px;padding:11px 12px;border:0;border-radius:9px;background:var(--blue);color:#fff;font:600 14px system-ui,sans-serif;cursor:pointer;transition:background .15s}
+button:hover:not(:disabled){background:#2563eb}
+button.secondary{background:var(--panel-2);color:var(--text);border:1px solid var(--line)}
+button.danger{background:transparent;color:var(--danger);border:1px solid #3a2226}
+button:disabled{opacity:.5;cursor:default}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+.summary{font-weight:700;font-size:15px}
+.live{display:flex;align-items:center;gap:8px;margin-top:6px;color:var(--muted);font-size:12px}
+.live i{width:8px;height:8px;border-radius:50%;background:#4b5263;display:inline-block}
+.live i.on{background:var(--blue);box-shadow:0 0 0 4px rgba(59,130,246,.18)}
+.live i.warn{background:var(--warn)}
+.hint{font-size:11px;color:var(--muted);margin:6px 0 0}
+.site{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:8px}
+.site b{display:block;font-size:13px}
+.site small{color:var(--muted);font-size:11px}
+.site button{width:auto;margin:0;padding:6px 10px;font-size:11px}
+.site .done{color:var(--blue-soft);font-size:11px;font-weight:600}
+#notice{white-space:pre-wrap;color:var(--danger);font-size:12px;margin:10px 0 0}
+#notice:empty{display:none}
+#stats,#expiry{font-size:12px;color:var(--muted);margin:10px 0 0}
+details{font-size:12px;color:var(--muted);margin-top:12px}
+summary{cursor:pointer}
+#rejected{white-space:pre-wrap}
+footer{margin-top:18px;border-top:1px solid var(--line);padding-top:12px}
+footer p{font-size:11px;color:var(--muted);margin:6px 0}
+a{color:var(--blue-soft);font-size:12px;text-decoration:none}
+a:hover{text-decoration:underline}
+[hidden]{display:none !important}
